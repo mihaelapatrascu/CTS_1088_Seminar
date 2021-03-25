@@ -1,8 +1,7 @@
-package ro.ase.csie.g1088.dp;
+package ro.ase.csie.cts.g1088.dp.prototype;
 
 import java.util.ArrayList;
 import java.util.Random;
-import java.util.SortedMap;
 
 public class Caracter3D implements Cloneable{
     String fisierModel3D;

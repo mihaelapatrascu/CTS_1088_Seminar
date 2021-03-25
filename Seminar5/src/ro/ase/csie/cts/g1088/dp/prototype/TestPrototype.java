@@ -1,4 +1,6 @@
-package ro.ase.csie.g1088.dp;
+package ro.ase.csie.cts.g1088.dp.prototype;
+
+import ro.ase.csie.cts.g1088.dp.prototype.Caracter3D;
 
 public class TestPrototype {
     public static void main(String[] args) throws CloneNotSupportedException {
