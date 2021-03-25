@@ -1,0 +1,60 @@
+package ro.ase.csie.g1088.dp;
+
+import java.util.ArrayList;
+import java.util.Random;
+import java.util.SortedMap;
+
+public class Caracter3D implements Cloneable{
+    String fisierModel3D;
+    String culoare;
+    int inaltime;
+    ArrayList<Integer> puncteGrafic = null;
+
+
+    public Caracter3D(String fisierModel3D) {
+        System.out.println("Se inarca modelul 3D din " + fisierModel3D);
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        this.fisierModel3D = fisierModel3D;
+
+        Random random = new Random();
+        puncteGrafic = new ArrayList<>();
+        for(int i = 0; i<10 ;i ++){
+            puncteGrafic.add(random.nextInt(1000));
+        }
+
+        System.out.println("Modelul a fost incarcat");
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Puncte caracter 3D: ");
+        for(int punct : puncteGrafic) {
+            sb.append(punct+"|");
+        }
+        return sb.toString();
+    }
+
+    private Caracter3D(){
+
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        //NU ASA
+//        Caracter3D copie = new Caracter3D(this.fisierModel3D);
+//        return copie;
+
+        Caracter3D copie = new Caracter3D();
+        copie.culoare = this.culoare;
+        copie.fisierModel3D = this.fisierModel3D;
+        copie.inaltime = this.inaltime;
+        copie.puncteGrafic = (ArrayList<Integer>) this.puncteGrafic.clone();
+
+        return copie;
+    }
+}

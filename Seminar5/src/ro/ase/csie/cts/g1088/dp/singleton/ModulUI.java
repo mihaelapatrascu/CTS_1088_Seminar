@@ -1,4 +1,4 @@
-package ro.ase.csie.g1088.dp.singleton;
+package ro.ase.csie.cts.g1088.dp.singleton;
 
 public class ModulUI {
 
