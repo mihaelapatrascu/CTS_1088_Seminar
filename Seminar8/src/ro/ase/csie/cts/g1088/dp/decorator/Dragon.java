@@ -22,4 +22,9 @@ public class Dragon extends SuperErou{
         System.out.println(String.format("%s se vindeca si recupereaza %d puncte", this.nume, puncte));
         this.puncteViata += puncte;
     }
+
+    @Override
+    public int getPuncteViata() {
+        return this.puncteViata;
+    }
 }
