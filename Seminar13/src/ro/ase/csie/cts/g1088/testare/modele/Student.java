@@ -78,15 +78,17 @@ public class Student {
 		
 	}
 
-    public int getNotaMinima() {
-        int min = 0;
-        for(int nota : this.note) {
-			if(min > nota) {
-                min = nota;
-            }
+	public int getNotaMinima() {
+		if( this.note == null || this.note.size() == 0){
+			return 0;
 		}
-        return min;
-    }
-	
-	
+		int min = this.note.get(0);
+		for(int nota : this.note) {
+			if(min > nota) {
+				min = nota;
+			}
+		}
+		return min;
+	}
+
 }
